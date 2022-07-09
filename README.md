@@ -24,6 +24,7 @@ O conjunto de dados utilizado contém as informações sobre o universo da Fórm
 ### [ 2 ] Query
 
 ### [ 3 ] Circuitos que mais protagonizaram acidentes.
+![imagem](./src/assets/querycircuito.jpg)
 
 ### [ 4 ] Query
 
@@ -34,6 +35,7 @@ O conjunto de dados utilizado contém as informações sobre o universo da Fórm
 ### [ 5 ] Query
 
 ### [ 6 ] Status das corridas.
+![imagem](./src/assets/querystatuslewis.jpg)
 
 ### [ 7 ] Query
 
