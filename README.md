@@ -24,27 +24,51 @@ O conjunto de dados utilizado contém as informações sobre o universo da Fórm
 ### [ 2 ] Query
 
 ### [ 3 ] Circuitos que mais protagonizaram acidentes.
-![imagem](./src/assets/querycircuito.jpg)
+
+![imagem](./src/assets/query3-grafico.jpg)
+
 ```sql
-SELECT 
+SELECT
   C.name as circuito,
   C.country,
-  S.status, 
+  S.status,
   count(*) as acidentes
 FROM f1_circuits as C
-LEFT JOIN 
+LEFT JOIN
   f1_races as RA on C.circuitId = RA.circuitId
-LEFT JOIN 
+LEFT JOIN
   f1_results as RE on RA.raceId = RE.raceId
-LEFT JOIN 
+LEFT JOIN
   f1_status as S on S.statusId = RE.statusId
 GROUP BY circuito, C.country, S.status
-HAVING S.status = 'Accident' 
+HAVING S.status = 'Accident'
 ORDER by acidentes desc;
 ```
 
+### [ 4 ] Restrospecto dos pilotos na história da Mercedes.
 
-### [ 4 ] Query
+![imagem](./src/assets/query4-grafico.jpg)
+
+```sql
+SELECT
+    pilotos.piloto_Id,
+    pilotos.nome,
+    pilotos.sobrenome,
+    construtores.nome,
+    COUNT(resultados.position) AS numero_vitorias
+FROM
+    resultados
+        INNER JOIN
+    pilotos ON resultados.driverId = pilotos.piloto_Id
+        INNER JOIN
+    construtores ON resultados.constructorId = construtores.constructor_Id
+WHERE
+    position = 1
+        AND construtores.nome = 'Mercedes'
+GROUP BY construtores.nome , pilotos.piloto_Id
+ORDER BY numero_vitorias DESC
+LIMIT 5;
+```
 
 ## Lewis Hamilton
 
@@ -53,28 +77,51 @@ ORDER by acidentes desc;
 ### [ 5 ] Query
 
 ### [ 6 ] Status das corridas.
-![imagem](./src/assets/querystatuslewis.jpg)
+
+![imagem](./src/assets/query6-grafico.jpg)
+
 ```sql
-SELECT 
+SELECT
   D.forename,
   D.surname,
   C.name as circuito,
   RE.statusId,
   S.status
-FROM f1_circuits as C 
-LEFT JOIN 
+FROM f1_circuits as C
+LEFT JOIN
   f1_races as RA on C.circuitId = RA.circuitId
-LEFT JOIN 
+LEFT JOIN
   f1_results as RE on RE.raceId = RA.raceId
-LEFT JOIN 
+LEFT JOIN
   f1_drivers as D on RE.driverId = D.driverId
-LEFT JOIN 
+LEFT JOIN
   f1_status as S on RE.statusId = S.statusId
 WHERE  D.forename = 'Lewis' and D.surname = 'Hamilton'
 GROUP BY D.forename, D.surname, RE.statusId, S.status, circuito;
 ```
 
-### [ 7 ] Query
+### [ 7 ] Em qual equipe Lewis Hamilton teve mais vitórias.
+
+![imagem](./src/assets/query7-grafico.jpg)
+
+```sql
+SELECT
+    pilotos.piloto_Id,
+    pilotos.nome,
+    pilotos.sobrenome,
+    construtores.nome,
+    COUNT(resultados.position) AS numero_vitorias
+FROM
+    resultados
+        INNER JOIN
+    pilotos ON resultados.driverId = pilotos.piloto_Id
+        INNER JOIN
+    construtores ON resultados.constructorId = construtores.constructor_Id
+WHERE
+    position = 1
+        AND pilotos.sobrenome = 'Hamilton'
+GROUP BY construtores.nome , pilotos.piloto_Id;
+```
 
 ### [ 8 ] Query
 
