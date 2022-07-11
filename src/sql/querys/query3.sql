@@ -1,9 +1,10 @@
 
---5 Maiores velocidades atingidas em uma unica volta na F1"
+--Nacionalidade das 5 maiores velocidades atingidas em uma unica volta na F1"
 
 SELECT 
   "F1_drivers".forename,
   "F1_drivers".surname,
+  "F1_drivers".nationality,
   "F1_results"."raceId" AS corrida,
   "F1_results"."fastestLapSpeed" AS velocidade
 FROM 
@@ -16,7 +17,8 @@ GROUP BY
   "F1_drivers".forename,
   "F1_drivers".surname,
   "F1_results"."raceId",
+  "F1_drivers".nationality,
   "F1_results"."fastestLapSpeed"
 ORDER BY
- "fastestLapSpeed" DESC
+ "fastestLapSpeed" DESC 
 LIMIT 5;
