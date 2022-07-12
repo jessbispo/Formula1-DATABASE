@@ -4,11 +4,14 @@ SELECT
   "F1_drivers".forename,
   "F1_drivers".surname,
   "F1_results"."raceId" AS corrida,
+  "F1_races".name AS circuito,
   "F1_results"."fastestLapTime" AS tempo
 FROM 
   "F1_results"
 INNER JOIN
-  "F1_drivers" ON  "F1_results"."driverId" = "F1_drivers"."driverId" 
+  "F1_drivers" ON  "F1_results"."driverId" = "F1_drivers"."driverId"
+  INNER JOIN
+  "F1_races" ON "F1_results"."raceId" = "F1_races"."raceId"
 WHERE 
   "F1_results"."statusId" = 1 
   AND "F1_drivers"."driverId" = '1' 
@@ -16,6 +19,7 @@ GROUP BY
   "F1_drivers".forename,
   "F1_drivers".surname,
   "F1_results"."raceId",
+  "F1_races".name,
   "F1_results"."fastestLapTime"
 ORDER BY
  "fastestLapTime" ASC
