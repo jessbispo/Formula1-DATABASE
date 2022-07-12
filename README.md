@@ -18,12 +18,58 @@ O conjunto de dados utilizado contém as informações sobre o universo da Fórm
 - [x] Trello (Organização da Squad)
 
 ## Queries
+<details>
+<summary><h3>[ 1 ] Pilotos mais vitoriosos da F1.</h3></summary>
 
-### [ 1 ] Query
+```sql
+SELECT
+  pilotos.piloto_id, pilotos.nome, pilotos.sobrenome, COUNT(resultados.position) AS numero_vitorias 
+FROM
+  resultados
+INNER JOIN
+  pilotos on resultados.driverId = pilotos.piloto_Id
+WHERE
+  resultados.position = 1
+GROUP BY
+  pilotos.piloto_Id
+ORDER BY
+  numero_vitorias desc limit 5;
+```
+</details>
 
-### [ 2 ] Query
+<details>
+<summary><h3>[ 2 ] Query</h3></summary>
+</details>
 
-### [ 3 ] Circuitos que mais protagonizaram acidentes.
+<details>
+<summary><h3>[ 3 ] Nacionalidade dos corredores que atingiram as maiores velocidades em uma única volta.</h3></summary>
+
+```sql
+SELECT 
+  "F1_drivers".forename,
+  "F1_drivers".surname,
+  "F1_drivers".nationality,
+  "F1_results"."raceId" AS corrida,
+  "F1_results"."fastestLapSpeed" AS velocidade
+FROM 
+  "F1_results"
+INNER JOIN
+  "F1_drivers" ON  "F1_results"."driverId" = "F1_drivers"."driverId" 
+WHERE 
+  "F1_results"."statusId" = 1
+GROUP BY
+  "F1_drivers".forename,
+  "F1_drivers".surname,
+  "F1_results"."raceId",
+  "F1_drivers".nationality,
+  "F1_results"."fastestLapSpeed"
+ORDER BY
+ "fastestLapSpeed" DESC 
+LIMIT 5;
+```
+</details>
+<details>
+<summary><h3>[ 4 ] Circuitos que mais protagonizaram acidentes.</h3></summary>
 
 ![imagem](./src/assets/query3-grafico.jpg)
 
@@ -44,8 +90,10 @@ GROUP BY circuito, C.country, S.status
 HAVING S.status = 'Accident'
 ORDER by acidentes desc;
 ```
+</details>
 
-### [ 4 ] Restrospecto dos pilotos na história da Mercedes.
+<details>
+<summary><h3>[ 5 ] Restrospecto dos pilotos na história da Mercedes.</h3></summary>
 
 ![imagem](./src/assets/query4-grafico.jpg)
 
@@ -69,14 +117,70 @@ GROUP BY construtores.nome , pilotos.piloto_Id
 ORDER BY numero_vitorias DESC
 LIMIT 5;
 ```
+</details>
+
+<details>
+<summary><h3>[ 6 ] Restrospecto dos pilotos na história da McLaren.</h3></summary>
+
+```sql
+SELECT 
+  pilotos.piloto_Id,
+  pilotos.nome,
+  pilotos.sobrenome,
+  construtores.nome,
+  COUNT(resultados.position) AS numero_vitorias
+FROM
+  resultados
+INNER JOIN
+  pilotos ON resultados.driverId = pilotos.piloto_Id
+INNER JOIN
+    construtores ON resultados.constructorId = construtores.constructor_Id
+WHERE
+  position = 1
+AND construtores.nome = 'McLaren'
+GROUP BY construtores.nome , pilotos.piloto_Id
+ORDER BY numero_vitorias DESC
+LIMIT 5;
+```
+</details>
 
 ## Lewis Hamilton
 
 > Destacamos as estatísticas do piloto Lewis Hamilton no processo de desenvolvimento das queries.
 
-### [ 5 ] Query
+<details>
+<summary><h3>[ 7 ] 5 voltas mais rapidas realizadas por Lewis Hamilton.</h3></summary>
 
-### [ 6 ] Status das corridas.
+```sql
+SELECT 
+  "F1_drivers".forename,
+  "F1_drivers".surname,
+  "F1_results"."raceId" AS corrida,
+  "F1_races".name AS circuito,
+  "F1_results"."fastestLapTime" AS tempo
+FROM 
+  "F1_results"
+INNER JOIN
+  "F1_drivers" ON  "F1_results"."driverId" = "F1_drivers"."driverId"
+  INNER JOIN
+  "F1_races" ON "F1_results"."raceId" = "F1_races"."raceId"
+WHERE 
+  "F1_results"."statusId" = 1 
+  AND "F1_drivers"."driverId" = '1' 
+GROUP BY
+  "F1_drivers".forename,
+  "F1_drivers".surname,
+  "F1_results"."raceId",
+  "F1_races".name,
+  "F1_results"."fastestLapTime"
+ORDER BY
+ "fastestLapTime" ASC
+LIMIT 5;
+```
+</details>
+
+<details>
+<summary><h3>[ 8 ] Status das corridas.</h3></summary>
 
 ![imagem](./src/assets/query6-grafico.jpg)
 
@@ -99,8 +203,10 @@ LEFT JOIN
 WHERE  D.forename = 'Lewis' and D.surname = 'Hamilton'
 GROUP BY D.forename, D.surname, RE.statusId, S.status, circuito;
 ```
+</details>
 
-### [ 7 ] Em qual equipe Lewis Hamilton teve mais vitórias.
+<details>
+<summary><h3>[ 9 ] Em qual equipe Lewis Hamilton teve mais vitórias.</h3></summary>
 
 ![imagem](./src/assets/query7-grafico.jpg)
 
@@ -122,8 +228,11 @@ WHERE
         AND pilotos.sobrenome = 'Hamilton'
 GROUP BY construtores.nome , pilotos.piloto_Id;
 ```
+</details>
 
-### [ 8 ] Query
+<details>
+<summary><h3>[ 10 ] Query</h3></summary>
+</details>
 
 ## WebSite
 
