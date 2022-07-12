@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+}
+
+body {
+    width: 100%;
+}
+
+.nav-link {
+    margin-left: 3rem
+}
+
+.image {
+    margin-right: 24rem;
+    margin-left: 1rem;
+}
+
+.firstSpan, .secondSpan, .p1, .p2, .carImg, .logoImg, .title, .singleFlag {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.title {
+    width: 20%;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.div-p {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.carImg {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.img {
+    width: 500px;
+}
+
+@media only screen and (max-width: 900px) {
+   .img {
+    width: 300px;
+   }
+  }
+
+.title, .firstSpan, .secondSpan {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+}
+
+.p1, .p2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.nav-link {
+    font-size: 22px !important;
+    font-family: 'Exo', sans-serif;
+}
+
+.firstSpan, .secondSpan {
+    font-size: 26px;
+}
+
+.footerSpan {
+    margin-left: 5rem;
+}
+
+.footerImg {
+    margin-left: -14rem;
+}
+
+.card-div {
+    display: inline-block;
+    width: 250px;
+    height: 350px;
+    margin: 2rem;
+    background-color: #15151E;
+    border-radius: 25px 5px 25px 5px;
+}
+.card-class1 {
+    padding-top: 1rem;
+    margin-left: 35rem;
+}
+
+.card-class2 {
+    margin-left: 45rem;
+}
+
+.card-image {
+    display: flex;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+}
+
+.sobre-title {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.card-text {
+    color: #E10600;
+    font-size: 26px;
+    text-align: center;
+}
+
+
+.card-text-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto 0 auto;
+    background-color: white;
+    width: 70%;
+    height: 15%;
+    border-radius: 5px;
+}
+
+.icon {
+    margin: 1rem 0.5rem 0.5rem 0.5rem;
+}
+
+.icon-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

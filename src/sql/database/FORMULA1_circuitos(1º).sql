@@ -1,0 +1,59 @@
+CREATE DATABASE  IF NOT EXISTS `FORMULA1` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `FORMULA1`;
+-- MySQL dump 10.13  Distrib 8.0.29, for Linux (x86_64)
+--
+-- Host: localhost    Database: FORMULA1
+-- ------------------------------------------------------
+-- Server version	8.0.29
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `circuitos`
+--
+
+DROP TABLE IF EXISTS `circuitos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `circuitos` (
+  `circuito_Id` int NOT NULL,
+  `circuit_Ref` varchar(14) NOT NULL,
+  `nome` varchar(37) NOT NULL,
+  `cidade` varchar(21) NOT NULL,
+  `país` varchar(12) NOT NULL,
+  `latitude` varchar(8) NOT NULL,
+  `longitude` varchar(8) NOT NULL,
+  `url` varchar(71) NOT NULL,
+  PRIMARY KEY (`circuito_Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `circuitos`
+--
+
+LOCK TABLES `circuitos` WRITE;
+/*!40000 ALTER TABLE `circuitos` DISABLE KEYS */;
+INSERT INTO `circuitos` VALUES (1,'albert_park','Albert Park Grand Prix Circuit','Melbourne','Australia','-378.497','144.968','http://en.wikipedia.org/wiki/Melbourne_Grand_Prix_Circuit'),(2,'sepang','Sepang International Circuit','Kuala Lumpur','Malaysia','276.083','101.738','http://en.wikipedia.org/wiki/Sepang_International_Circuit'),(3,'bahrain','Bahrain International Circuit','Sakhir','Bahrain','260.325','505.106','http://en.wikipedia.org/wiki/Bahrain_International_Circuit'),(4,'catalunya','Circuit de Barcelona-Catalunya','MontmelÌ','Spain','41,57','226.111','http://en.wikipedia.org/wiki/Circuit_de_Barcelona-Catalunya'),(5,'istanbul','Istanbul Park','Istanbul','Turkey','409.517','29.405','http://en.wikipedia.org/wiki/Istanbul_Park'),(6,'monaco','Circuit de Monaco','Monte-Carlo','Monaco','437.347','742.056','http://en.wikipedia.org/wiki/Circuit_de_Monaco'),(7,'villeneuve','Circuit Gilles Villeneuve','Montreal','Canada','45,5','-735.228','http://en.wikipedia.org/wiki/Circuit_Gilles_Villeneuve'),(8,'magny_cours','Circuit de Nevers Magny-Cours','Magny Cours','France','468.642','316.361','http://en.wikipedia.org/wiki/Circuit_de_Nevers_Magny-Cours'),(9,'silverstone','Silverstone Circuit','Silverstone','UK','520.786','-101.694','http://en.wikipedia.org/wiki/Silverstone_Circuit'),(10,'hockenheimring','Hockenheimring','Hockenheim','Germany','493.278','856.583','http://en.wikipedia.org/wiki/Hockenheimring'),(11,'hungaroring','Hungaroring','Budapest','Hungary','475.789','192.486','http://en.wikipedia.org/wiki/Hungaroring'),(12,'valencia','Valencia Street Circuit','Valencia','Spain','394.589','-331.667','http://en.wikipedia.org/wiki/Valencia_Street_Circuit'),(13,'spa','Circuit de Spa-Francorchamps','Spa','Belgium','504.372','597.139','http://en.wikipedia.org/wiki/Circuit_de_Spa-Francorchamps'),(14,'monza','Autodromo Nazionale di Monza','Monza','Italy','456.156','928.111','http://en.wikipedia.org/wiki/Autodromo_Nazionale_Monza'),(15,'marina_bay','Marina Bay Street Circuit','Marina Bay','Singapore','1.2914','103.864','http://en.wikipedia.org/wiki/Marina_Bay_Street_Circuit'),(16,'fuji','Fuji Speedway','Oyama','Japan','353.717','138.927','http://en.wikipedia.org/wiki/Fuji_Speedway'),(17,'shanghai','Shanghai International Circuit','Shanghai','China','313.389','121,22','http://en.wikipedia.org/wiki/Shanghai_International_Circuit'),(18,'interlagos','Autódromo José Carlos Pace','São Paulo','Brazil','-237.036','-466.997','http://en.wikipedia.org/wiki/Aut%C3%B3dromo_Jos%C3%A9_Carlos_Pace'),(19,'indianapolis','Indianapolis Motor Speedway','Indianapolis','USA','39.795','-862.347','http://en.wikipedia.org/wiki/Indianapolis_Motor_Speedway'),(20,'nurburgring','Nurburgring','Nurburg','Germany','503.356','6.9475','http://en.wikipedia.org/wiki/N%C3%BCrburgring'),(21,'imola','Autodromo Enzo e Dino Ferrari','Imola','Italy','443.439','11.7167','http://en.wikipedia.org/wiki/Autodromo_Enzo_e_Dino_Ferrari'),(22,'suzuka','Suzuka Circuit','Suzuka','Japan','348.431','136.541','http://en.wikipedia.org/wiki/Suzuka_Circuit'),(23,'osterreichring','A1-Ring','Spielburg','Austria','472.197','147.647','http://en.wikipedia.org/wiki/A1-Ring'),(24,'yas_marina','Yas Marina Circuit','Abu Dhabi','UAE','244.672','546.031','http://en.wikipedia.org/wiki/Yas_Marina_Circuit'),(25,'galvez','Autódromo Juan y Oscar GÌÁlvez','Buenos Aires','Argentina','-346.943','-584.593','http://en.wikipedia.org/wiki/Aut%C3%B3dromo_Oscar_Alfredo_G%C3%A1lvez'),(26,'jerez','Circuito de Jerez','Jerez de la Frontera','Spain','367.083','-603.417','http://en.wikipedia.org/wiki/Circuito_Permanente_de_Jerez'),(27,'estoril','Autódromo do Estoril','Estoril','Portugal','387.506','-939.417','http://en.wikipedia.org/wiki/Aut%C3%B3dromo_do_Estoril'),(28,'okayama','Okayama International Circuit','Okayama','Japan','34.915','134.221','http://en.wikipedia.org/wiki/TI_Circuit'),(29,'adelaide','Adelaide Street Circuit','Adelaide','Australia','-349.272','138.617','http://en.wikipedia.org/wiki/Adelaide_Street_Circuit'),(30,'kyalami','Kyalami','Midrand','South Africa','-259.894','280.767','http://en.wikipedia.org/wiki/Kyalami'),(31,'donington','Donington Park','Castle Donington','UK','528.306','-137.528','http://en.wikipedia.org/wiki/Donington_Park'),(32,'rodriguez','Autódromo Hermanos RodrÌ_guez','Mexico City','Mexico','194.042','-990.907','http://en.wikipedia.org/wiki/Aut%C3%B3dromo_Hermanos_Rodr%C3%ADguez'),(33,'phoenix','Phoenix street circuit','Phoenix','USA','334.479','-112.075','http://en.wikipedia.org/wiki/Phoenix_street_circuit'),(34,'ricard','Circuit Paul Ricard','Le Castellet','France','432.506','579.167','http://en.wikipedia.org/wiki/Paul_Ricard_Circuit'),(35,'yeongam','Korean International Circuit','Yeongam County','Korea','347.333','126.417','http://en.wikipedia.org/wiki/Korean_International_Circuit'),(36,'jacarepagua','Autódromo Internacional Nelson Piquet','Rio de Janeiro','Brazil','-229.756','-43.395','http://en.wikipedia.org/wiki/Aut%C3%B3dromo_Internacional_Nelson_Piquet'),(37,'detroit','Detroit Street Circuit','Detroit','USA','423.298','-830.401','http://en.wikipedia.org/wiki/Detroit_street_circuit'),(38,'brands_hatch','Brands Hatch','Kent','UK','513.569','263.056','http://en.wikipedia.org/wiki/Brands_Hatch'),(39,'zandvoort','Circuit Park Zandvoort','Zandvoort','Netherlands','523.888','454.092','http://en.wikipedia.org/wiki/Circuit_Zandvoort'),(40,'zolder','Zolder','Heusden-Zolder','Belgium','509.894','525.694','http://en.wikipedia.org/wiki/Zolder'),(41,'dijon','Dijon-Prenois','Dijon','France','473.625','489.913','http://en.wikipedia.org/wiki/Dijon-Prenois'),(42,'dallas','Fair Park','Dallas','USA','327.774','-967.587','http://en.wikipedia.org/wiki/Fair_Park'),(43,'long_beach','Long Beach','California','USA','337.651','-118.189','http://en.wikipedia.org/wiki/Long_Beach,_California'),(44,'las_vegas','Las Vegas Street Circuit','Nevada','USA','361.162','-115.174','http://en.wikipedia.org/wiki/Las_Vegas,_Nevada'),(45,'jarama','Jarama','Madrid','Spain','406.171','-358.558','http://en.wikipedia.org/wiki/Circuito_Permanente_Del_Jarama'),(46,'watkins_glen','Watkins Glen','New York State','USA','423.369','-769.272','http://en.wikipedia.org/wiki/Watkins_Glen_International'),(47,'anderstorp','Scandinavian Raceway','Anderstorp','Sweden','572.653','136.042','http://en.wikipedia.org/wiki/Scandinavian_Raceway'),(48,'mosport','Mosport International Raceway','Ontario','Canada','440.481','-786.756','http://en.wikipedia.org/wiki/Mosport'),(49,'montjuic','MontjuÌøc','Barcelona','Spain','413.664','215.167','http://en.wikipedia.org/wiki/Montju%C3%AFc_circuit'),(50,'nivelles','Nivelles-Baulers','Brussels','Belgium','506.211','432.694','http://en.wikipedia.org/wiki/Nivelles-Baulers'),(51,'charade','Charade Circuit','Clermont-Ferrand','France','457.472','303.889','http://en.wikipedia.org/wiki/Charade_Circuit'),(52,'tremblant','Circuit Mont-Tremblant','Quebec','Canada','461.877','-746.099','http://en.wikipedia.org/wiki/Circuit_Mont-Tremblant'),(53,'essarts','Rouen-Les-Essarts','Rouen','France','493.306','100.458','http://en.wikipedia.org/wiki/Rouen-Les-Essarts'),(54,'lemans','Le Mans','Le Mans','France','47,95','224.231','http://en.wikipedia.org/wiki/Circuit_de_la_Sarthe#Bugatti_Circuit'),(55,'reims','Reims-Gueux','Reims','France','492.542','393.083','http://en.wikipedia.org/wiki/Reims-Gueux'),(56,'george','Prince George Circuit','Eastern Cape Province','South Africa','-330.486','278.736','http://en.wikipedia.org/wiki/Prince_George_Circuit'),(57,'zeltweg','Zeltweg','Styria','Austria','472.039','147.478','http://en.wikipedia.org/wiki/Zeltweg_Airfield'),(58,'aintree','Aintree','Liverpool','UK','534.769','-294.056','http://en.wikipedia.org/wiki/Aintree_Motor_Racing_Circuit'),(59,'boavista','Circuito da Boavista','Oporto','Portugal','411.705','-867.325','http://en.wikipedia.org/wiki/Circuito_da_Boavista'),(60,'riverside','Riverside International Raceway','California','USA','33.937','-117.273','http://en.wikipedia.org/wiki/Riverside_International_Raceway'),(61,'avus','AVUS','Berlin','Germany','524.806','132.514','http://en.wikipedia.org/wiki/AVUS'),(62,'monsanto','Monsanto Park Circuit','Lisbon','Portugal','387.197','-920.306','http://en.wikipedia.org/wiki/Monsanto_Park_Circuit'),(63,'sebring','Sebring International Raceway','Florida','USA','274.547','-813.483','http://en.wikipedia.org/wiki/Sebring_Raceway'),(64,'ain-diab','Ain Diab','Casablanca','Morocco','335.786','-76.875','http://en.wikipedia.org/wiki/Ain-Diab_Circuit'),(65,'pescara','Pescara Circuit','Pescara','Italy','42.475','141.508','http://en.wikipedia.org/wiki/Pescara_Circuit'),(66,'bremgarten','Circuit Bremgarten','Bern','Switzerland','469.589','740.194','http://en.wikipedia.org/wiki/Circuit_Bremgarten'),(67,'pedralbes','Circuit de Pedralbes','Barcelona','Spain','413.903','211.667','http://en.wikipedia.org/wiki/Pedralbes_Circuit'),(68,'buddh','Buddh International Circuit','Uttar Pradesh','India','283.487','775.331','http://en.wikipedia.org/wiki/Buddh_International_Circuit'),(69,'americas','Circuit of the Americas','Austin','USA','301.328','-976.411','http://en.wikipedia.org/wiki/Circuit_of_the_Americas'),(70,'red_bull_ring','Red Bull Ring','Spielburg','Austria','472.197','147.647','http://en.wikipedia.org/wiki/Red_Bull_Ring'),(71,'sochi','Sochi Autodrom','Sochi','Russia','434.057','399.578','http://en.wikipedia.org/wiki/Sochi_Autodrom'),(72,'port_imperial','Port Imperial Street Circuit','New Jersey','USA','407.769','-740.111','http://en.wikipedia.org/wiki/Port_Imperial_Street_Circuit'),(73,'BAK','Baku City Circuit','Baku','Azerbaijan','403.725','498.533','http://en.wikipedia.org/wiki/Baku_City_Circuit');
+/*!40000 ALTER TABLE `circuitos` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2022-07-10 13:34:25
