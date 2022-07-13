@@ -41,7 +41,24 @@ ORDER BY
 </details>
 
 <details>
-<summary><strong>[ 2 ] Query</strong></summary>
+<summary><strong>[ 2 ] Média de velocidade máxima nas voltas mais rápidas dos pilotos.</strong></summary>
+</br>
+
+![imagem](./src/assets/query2.jpg)
+
+```sql
+SELECT "fastestLapSpeed" 
+AS MAX_VELOCIDADE 
+FROM "F1_resultados" 
+WHERE "resultId" <100 
+ORDER BY "fastestLapSpeed" 
+ASC;
+
+SELECT AVG("fastestLapSpeed") 
+AS MAX_VELOCIDADE 
+FROM "F1_resultados" 
+WHERE "resultId" < 100;
+```
 </details>
 
 <details>
@@ -247,12 +264,30 @@ GROUP BY construtores.nome , pilotos.piloto_Id;
 </details>
 
 <details>
-<summary><strong>[ 10 ] Query</strong></summary>
+<summary><strong>[ 10 ] Média de velocidade máxima nas voltas mais rápidas de Lewis Hamilton</strong></summary>
+</br>
+
+![imagem](./src/assets/query10.jpg)
+
+```sql
+SELECT "fastestLapSpeed" 
+AS MAX_VELOCIDADE 
+FROM "F1_resultados" 
+WHERE "driverId" = 1 
+ORDER BY "fastestLapSpeed" ASC;
+
+SELECT AVG("fastestLapSpeed") 
+AS MAX_VELOCIDADE 
+FROM "F1_resultados" 
+WHERE "driverId" = 1;
+
+```
+
 </details>
 
 ## 🌐 WebSite
 
-Desenvolvemos um site para melhor visualização dos gráficos. [Acesse aqui]().
+Desenvolvemos um site para melhor visualização dos gráficos. [Acesse aqui](https://jessbispo.github.io/modulo3/).
 
 ## Squad
 
