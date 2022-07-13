@@ -3,23 +3,26 @@
 > Projeto final desenvolvido no 3º módulo do curso de Desenvolvimento Web FullStack no
 > programa B2B Geração Futuro (Resilia + Stone).
 
-## Descrição
+## Descrição 
 
 O propósito desse projeto é criar visualizações de dados com base nas consultas
 realizadas no banco de dados escolhido (Fórmula 1).
 
-O conjunto de dados utilizado contém as informações sobre o universo da Fórmula 1, permitindo a análise e consulta dos construtores, pilotos, qualificações, circuitos, tempos de volta, pit stops, entre outros.
+O conjunto de dados contém as informações sobre o universo da Fórmula 1, permitindo a análise e consulta dos construtores, pilotos, qualificações, circuitos, tempos de volta, pit stops, entre outros.
 
-## Ferramentas Utilizadas
+## 🛠 Ferramentas Utilizadas 
 
 - [x] MySQL WorkBench
 - [x] The Open Source Firebase (Supabase)
 - [x] Figma (Confecção dos gráficos)
 - [x] Trello (Organização da Squad)
 
-## Queries
+## 🔎 Queries 
 <details>
-<summary><h3>[ 1 ] Pilotos mais vitoriosos da F1.</h3></summary>
+<summary><strong>[ 1 ] Pilotos mais vitoriosos da F1.</strong></summary>
+</br>
+
+![imagem](./src/assets/maisVitoriosos.jpg)
 
 ```sql
 SELECT
@@ -38,11 +41,14 @@ ORDER BY
 </details>
 
 <details>
-<summary><h3>[ 2 ] Query</h3></summary>
+<summary><strong>[ 2 ] Query</strong></summary>
 </details>
 
 <details>
-<summary><h3>[ 3 ] Nacionalidade dos corredores que atingiram as maiores velocidades em uma única volta.</h3></summary>
+<summary><strong>[ 3 ] Nacionalidade dos corredores que atingiram as maiores velocidades em uma única volta.</strong></summary>
+</br>
+
+![imagem](./src/assets/nacionalidadeQuery.jpg)
 
 ```sql
 SELECT 
@@ -69,7 +75,8 @@ LIMIT 5;
 ```
 </details>
 <details>
-<summary><h3>[ 4 ] Circuitos que mais protagonizaram acidentes.</h3></summary>
+<summary><strong>[ 4 ] Circuitos que mais protagonizaram acidentes.</strong></summary>
+</br>
 
 ![imagem](./src/assets/query3-grafico.jpg)
 
@@ -93,7 +100,8 @@ ORDER by acidentes desc;
 </details>
 
 <details>
-<summary><h3>[ 5 ] Restrospecto dos pilotos na história da Mercedes.</h3></summary>
+<summary><strong>[ 5 ] Restrospecto dos pilotos na história da Mercedes.</strong></summary>
+</br>
 
 ![imagem](./src/assets/query4-grafico.jpg)
 
@@ -120,7 +128,10 @@ LIMIT 5;
 </details>
 
 <details>
-<summary><h3>[ 6 ] Restrospecto dos pilotos na história da McLaren.</h3></summary>
+<summary><strong>[ 6 ] Restrospecto dos pilotos na história da McLaren.</strong></summary>
+</br>
+
+![image](./src/assets/mercedesQuery.jpg)
 
 ```sql
 SELECT 
@@ -144,12 +155,15 @@ LIMIT 5;
 ```
 </details>
 
-## Lewis Hamilton
+## Lewis Hamilton 
 
 > Destacamos as estatísticas do piloto Lewis Hamilton no processo de desenvolvimento das queries.
 
 <details>
-<summary><h3>[ 7 ] 5 voltas mais rapidas realizadas por Lewis Hamilton.</h3></summary>
+<summary><strong>[ 7 ] 5 voltas mais rapidas realizadas por Lewis Hamilton.</strong></summary>
+</br>
+
+![image](./src/assets/voltaMaisRapidaL.jpg)
 
 ```sql
 SELECT 
@@ -180,7 +194,8 @@ LIMIT 5;
 </details>
 
 <details>
-<summary><h3>[ 8 ] Status das corridas.</h3></summary>
+<summary><strong>[ 8 ] Status das corridas.</strong></summary>
+</br>
 
 ![imagem](./src/assets/query6-grafico.jpg)
 
@@ -206,7 +221,8 @@ GROUP BY D.forename, D.surname, RE.statusId, S.status, circuito;
 </details>
 
 <details>
-<summary><h3>[ 9 ] Em qual equipe Lewis Hamilton teve mais vitórias.</h3></summary>
+<summary><strong>[ 9 ] Em qual equipe Lewis Hamilton teve mais vitórias.</strong></summary>
+</br>
 
 ![imagem](./src/assets/query7-grafico.jpg)
 
@@ -231,10 +247,10 @@ GROUP BY construtores.nome , pilotos.piloto_Id;
 </details>
 
 <details>
-<summary><h3>[ 10 ] Query</h3></summary>
+<summary><strong>[ 10 ] Query</strong></summary>
 </details>
 
-## WebSite
+## 🌐 WebSite
 
 Desenvolvemos um site para melhor visualização dos gráficos. [Acesse aqui]().
 
