@@ -46,6 +46,19 @@ ORDER BY
 
 ![imagem](./src/assets/query2.jpg)
 
+```sql
+SELECT "fastestLapSpeed" 
+AS MAX_VELOCIDADE 
+FROM "F1_resultados" 
+WHERE "resultId" <100 
+ORDER BY "fastestLapSpeed" 
+ASC;
+
+SELECT AVG("fastestLapSpeed") 
+AS MAX_VELOCIDADE 
+FROM "F1_resultados" 
+WHERE "resultId" < 100;
+```
 </details>
 
 <details>
@@ -255,6 +268,20 @@ GROUP BY construtores.nome , pilotos.piloto_Id;
 </br>
 
 ![imagem](./src/assets/query10.jpg)
+
+```sql
+SELECT "fastestLapSpeed" 
+AS MAX_VELOCIDADE 
+FROM "F1_resultados" 
+WHERE "driverId" = 1 
+ORDER BY "fastestLapSpeed" ASC;
+
+SELECT AVG("fastestLapSpeed") 
+AS MAX_VELOCIDADE 
+FROM "F1_resultados" 
+WHERE "driverId" = 1;
+
+```
 
 </details>
 
