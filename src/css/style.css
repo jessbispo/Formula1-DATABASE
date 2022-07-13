@@ -6,12 +6,7 @@ body {
   width: 100%;
 }
 
-.nav-link {
-  margin-left: 5rem;
-}
-
 .image {
-  margin-right: 24rem;
   margin-left: 1rem;
 }
 
@@ -75,19 +70,22 @@ body {
   font-family: "Exo", sans-serif;
 }
 
+.navbar {
+  width: 100%;
+}
+
 .firstSpan,
 .secondSpan {
   font-size: 26px;
 }
 
 .footerSpan {
-  margin-left: 5rem;
   color: white;
   text-decoration: none;
 }
 
-.footerImg {
-  margin-left: -14rem;
+footer {
+  width: 100%;
 }
 
 .card-div {
@@ -143,4 +141,128 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+@media only screen and (max-width: 1500px) {
+  .card-class1 {
+    margin-left: 20rem;
+  }
+  .card-class2 {
+    margin-left: 30rem;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  .card-class1 {
+    margin-left: 10rem;
+  }
+  .card-class2 {
+    margin-left: 15rem;
+  }
+}
+
+@media only screen and (min-width: 761px) {
+  .row .footerImg {
+    width: 80px !important;
+    height: 40px;
+  }
+  .footerSection {
+    width: 25rem;
+  }
+  .navbar-nav {
+    margin: 0 auto;
+  }
+  .nav-link {
+    margin-right: 3rem;
+  }
+  .image {
+    margin-right: -6rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .footerImg {
+    width: 80px !important;
+    height: 40px;
+    margin-top: 3rem !important;
+  }
+  .footerSpan {
+    margin-left: 0;
+  }
+  .nav-link {
+    text-align: center;
+  }
+  .title {
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+  .p1,
+  .p2 {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 16px;
+  }
+  .div-p {
+    width: 100%;
+  }
+  .secondSpan {
+    text-align: center;
+  }
+  .img-col {
+    flex: 0 0 0% !important;
+    margin: 0 auto;
+  }
+  .card-class1 {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .card-class2 {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .footerImg {
+    width: 80px !important;
+    height: 40px;
+    margin: 0 auto;
+  }
+  .footerSpan {
+    margin-left: 0;
+    padding: 1rem;
+  }
+  .nav-link {
+    margin: 0;
+    text-align: center;
+  }
+  .p1,
+  .p2 {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .div-p {
+    width: 100%;
+  }
+  .title {
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+  .card-class1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .card-class2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+  }
 }
