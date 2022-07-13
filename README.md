@@ -287,7 +287,7 @@ WHERE "driverId" = 1;
 
 ## 🌐 WebSite
 
-Desenvolvemos um site para melhor visualização dos gráficos. [Acesse aqui](https://jessbispo.github.io/modulo3/).
+Desenvolvemos um site para melhor visualização dos gráficos. [Acesse aqui](https://jessbispo.github.io/Formula1-DATABASE/).
 
 ## Squad
 
