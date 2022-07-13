@@ -41,7 +41,11 @@ ORDER BY
 </details>
 
 <details>
-<summary><strong>[ 2 ] Query</strong></summary>
+<summary><strong>[ 2 ] Média de velocidade máxima nas voltas mais rápidas dos pilotos.</strong></summary>
+</br>
+
+![imagem](./src/assets/query2.jpg)
+
 </details>
 
 <details>
@@ -247,7 +251,11 @@ GROUP BY construtores.nome , pilotos.piloto_Id;
 </details>
 
 <details>
-<summary><strong>[ 10 ] Query</strong></summary>
+<summary><strong>[ 10 ] Média de velocidade máxima nas voltas mais rápidas de Lewis Hamilton</strong></summary>
+</br>
+
+![imagem](./src/assets/query10.jpg)
+
 </details>
 
 ## 🌐 WebSite
