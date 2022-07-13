@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+}
+
+body {
+  width: 100%;
+}
+
+.image {
+  margin-left: 1rem;
+}
+
+.firstSpan,
+.secondSpan,
+.p1,
+.p2,
+.carImg,
+.logoImg,
+.title,
+.singleFlag {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.title {
+  width: 20%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.div-p {
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.carImg {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.img {
+  width: 500px;
+}
+
+@media only screen and (max-width: 900px) {
+  .img {
+    width: 300px;
+  }
+}
+
+.title,
+.firstSpan,
+.secondSpan {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+}
+
+.p1,
+.p2 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.nav-link {
+  font-size: 22px !important;
+  font-family: "Exo", sans-serif;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.firstSpan,
+.secondSpan {
+  font-size: 26px;
+}
+
+.footerSpan {
+  color: white;
+  text-decoration: none;
+}
+
+footer {
+  width: 100%;
+}
+
+.card-div {
+  display: inline-block;
+  width: 250px;
+  height: 350px;
+  margin: 2rem;
+  background-color: #15151e;
+  border-radius: 25px 5px 25px 5px;
+}
+.card-class1 {
+  padding-top: 1rem;
+  margin-left: 35rem;
+}
+
+.card-class2 {
+  margin-left: 45rem;
+}
+
+.card-image {
+  display: flex;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+}
+
+.sobre-title {
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.card-text {
+  color: #e10600;
+  font-size: 26px;
+  text-align: center;
+}
+
+.card-text-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto 0 auto;
+  background-color: white;
+  width: 70%;
+  height: 15%;
+  border-radius: 5px;
+}
+
+.icon {
+  margin: 1rem 0.5rem 0.5rem 0.5rem;
+}
+
+.icon-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1500px) {
+  .card-class1 {
+    margin-left: 20rem;
+  }
+  .card-class2 {
+    margin-left: 30rem;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  .card-class1 {
+    margin-left: 10rem;
+  }
+  .card-class2 {
+    margin-left: 15rem;
+  }
+}
+
+@media only screen and (min-width: 761px) {
+  .row .footerImg {
+    width: 80px !important;
+    height: 40px;
+  }
+  .footerSection {
+    width: 25rem;
+  }
+  .navbar-nav {
+    margin: 0 auto;
+  }
+  .nav-link {
+    margin-right: 3rem;
+  }
+  .image {
+    margin-right: -6rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .footerImg {
+    width: 80px !important;
+    height: 40px;
+    margin-top: 3rem !important;
+  }
+  .footerSpan {
+    margin-left: 0;
+  }
+  .nav-link {
+    text-align: center;
+  }
+  .title {
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+  .p1,
+  .p2 {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 16px;
+  }
+  .div-p {
+    width: 100%;
+  }
+  .secondSpan {
+    text-align: center;
+  }
+  .img-col {
+    flex: 0 0 0% !important;
+    margin: 0 auto;
+  }
+  .card-class1 {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .card-class2 {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .footerImg {
+    width: 80px !important;
+    height: 40px;
+    margin: 0 auto;
+  }
+  .footerSpan {
+    margin-left: 0;
+    padding: 1rem;
+  }
+  .nav-link {
+    margin: 0;
+    text-align: center;
+  }
+  .p1,
+  .p2 {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .div-p {
+    width: 100%;
+  }
+  .title {
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+  .card-class1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .card-class2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
